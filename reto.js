@@ -1,5 +1,5 @@
 const diametro = 1.5;
-const grosor = 0.2;
+const grosor = 0.5;
 let mensaje;
 
 if ( (diametro>1.4 && grosor<0.4) || (diametro <= 1.4 && diametro > 0.8 && grosor > 0.25) ){
