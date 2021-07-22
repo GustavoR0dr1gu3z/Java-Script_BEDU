@@ -55,3 +55,21 @@ switch (day) {
 }
 
 console.log(text); // Tuesday
+
+
+// SWITCH CON EJEMPLO DEL TIEMPO
+
+switch(time){
+    case (time<12):
+        greeting = "Good Morning";
+        break;
+    case (time<20):
+        greeting = "Good Afternoon";
+        break;
+    case (time>=20):
+        greeting = "Good Night";
+        break;
+    default:
+        greeting = "No existe la hora"
+}
+console.log(greeting);
