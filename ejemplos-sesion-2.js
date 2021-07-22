@@ -1,5 +1,5 @@
 // IF ELSE 
-
+/*
 const time = 28;
 let greeting;
 
@@ -73,3 +73,15 @@ switch(time){
         greeting = "No existe esa hora"
 }
 console.log(greeting);
+
+*/
+var rango1 = 0;
+const rango2 = 20;
+
+
+for(rango1 = 0; rango1<=rango2; rango1++){
+    if (rango1%2 == 1){
+        /*NUMERO IMPAR*/
+        console.log(rango1);
+    }
+}
