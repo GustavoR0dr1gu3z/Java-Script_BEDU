@@ -70,6 +70,6 @@ switch(time){
         greeting = "Good Night";
         break;
     default:
-        greeting = "No existe la hora"
+        greeting = "No existe esa hora"
 }
 console.log(greeting);
