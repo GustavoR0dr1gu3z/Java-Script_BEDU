@@ -80,8 +80,8 @@ const rango2 = 20;
 
 
 for(rango1 = 0; rango1<=rango2; rango1++){
-    if (rango1%2 == 1){
-        /*NUMERO IMPAR*/
+    if (rango1%2 == 0){
+        /*NUMERO PAR*/
         console.log(rango1);
     }
 }
