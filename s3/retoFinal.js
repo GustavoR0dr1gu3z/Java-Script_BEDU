@@ -8,10 +8,15 @@ const numero = 50;
 let primo = []
 let noPrimo = []
 
-for(i=2; i<numero; i++){
-    if(numero%i !== 0){
-        primo.push(i)        
+function F_primo(numero){
+
+    for(i=2; i<numero; i++){
+        if (numero%i == 0){
+            noPrimo.push(i);
+            return false;
+        }
     }
+    return numero !== 1;    
 }
 
-console.log("PRIMO:\n",primo)
+console.log("PRIMO:\n",F_primo(50))
