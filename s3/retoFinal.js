@@ -10,8 +10,8 @@ let noPrimo = []
 
 function F_primo(numero){
 
-    for(i=2; i<numero; i++){
-        if (numero%i == 0){
+    for(let i=2; i<numero; i++){
+        if (numero%i === 0){
             noPrimo.push(i);
             return false;
         }
@@ -19,4 +19,9 @@ function F_primo(numero){
     return numero !== 1;    
 }
 
-console.log("PRIMO:\n",F_primo(50))
+
+for (i=1; i<50; i++){
+    if(F_primo(i)){
+        console.log(i)
+    }
+}
