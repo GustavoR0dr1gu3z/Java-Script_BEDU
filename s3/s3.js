@@ -22,3 +22,9 @@ const car  = {
 }
 
 const keys = Object.keys(car)
+const pairs = []
+
+//Version larga
+for(let i=0; i<keys.length; i++){
+    pairs.push(keys[i], car[keys[i]])
+}
