@@ -24,3 +24,4 @@ for(const num of arrayJuntos){
         suma += num;
     }
 }
+console.log(suma)
