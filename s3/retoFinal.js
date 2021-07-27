@@ -22,10 +22,8 @@ function F_primo(numero){
 }
 
 
-for (i=1; i<50; i++){
-    if(F_primo(i)){
-        console.log(i)
+    for (i=1; i<arrayJuntos.length; i++){
+        if(F_primo(arrayJuntos[i])){
+            console.log(i)
+        }
     }
-}
-
-console.log(arrayJuntos)
