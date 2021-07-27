@@ -7,7 +7,7 @@ const calificaciones = {
 const arrayJuntos = [...array1, ...array2, ...calificaciones.array3];
 
 const tamano = arrayJuntos.length;
-
+let suma = 0;
 
 function F_primo(tamano){
 
@@ -21,6 +21,6 @@ function F_primo(tamano){
 
 for(const num of arrayJuntos){
     if(F_primo(num)){
-        console.log(num)
+        suma += num;
     }
 }
