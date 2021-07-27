@@ -7,13 +7,6 @@ const calificaciones = {
 const numero = 50;
 let primo = []
 
-for (var i = 2; i < numero; i++) {
-
-    if (numero % i === 0) {
-        return false;
-    }else{
-        primo.push(numero)
-    }
+for(i=2; i<numero; i++){
+    
 }
-
-console.log(primo)
