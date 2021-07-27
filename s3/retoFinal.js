@@ -4,6 +4,8 @@ const calificaciones = {
     array3:[11, 12, 13, 14, 15]
 };
 
+const arrayJuntos = [...array1, ...array2, ...calificaciones.array3];
+
 const numero = 50;
 let primo = []
 let noPrimo = []
@@ -25,3 +27,5 @@ for (i=1; i<50; i++){
         console.log(i)
     }
 }
+
+console.log(arrayJuntos)
