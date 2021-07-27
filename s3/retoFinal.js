@@ -6,7 +6,14 @@ const calificaciones = {
 
 const numero = 50;
 let primo = []
-
+let noPrimo = []
 for(i=2; i<numero; i++){
-    
+    if(numero%numero === 0){
+        noPrimo.push(i);
+    }else{
+        primo.push(i);
+    }
 }
+
+console.log(primo)
+console.log(noPrimo)
