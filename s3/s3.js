@@ -13,3 +13,10 @@ for(const number of numbers){
 
 console.log(numbers)
 console.log(doubled)
+
+
+const car  = {
+    brand: 'Nissan',
+    model: 'Versa',
+    year: 2020
+}
