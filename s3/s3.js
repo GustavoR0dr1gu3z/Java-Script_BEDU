@@ -7,6 +7,7 @@ for(let i=0; i<numbers.length; i++){
 */
 
 for(const number of numbers){
+    if(number==1) continue;
     doubled.push(number*2)
 }
 
