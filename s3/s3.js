@@ -28,4 +28,4 @@ const pairs = []
 for(let i=0; i<keys.length; i++){
     pairs.push(keys[i], car[keys[i]])
 }
-console.log(pair)
+console.log(pairs)
