@@ -20,3 +20,5 @@ const car  = {
     model: 'Versa',
     year: 2020
 }
+
+const keys = Object.keys(car)
