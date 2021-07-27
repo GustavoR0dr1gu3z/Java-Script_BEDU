@@ -6,24 +6,21 @@ const calificaciones = {
 
 const arrayJuntos = [...array1, ...array2, ...calificaciones.array3];
 
-const numero = 50;
-let primo = []
-let noPrimo = []
+const tamano = arrayJuntos.length;
 
-function F_primo(numero){
 
-    for(let i=2; i<numero; i++){
-        if (numero%i === 0){
-            noPrimo.push(i);
+function F_primo(tamano){
+
+    for(let i=2; i<tamano; i++){
+        if (tamano%i === 0){
             return false;
         }
     }
-    return numero !== 1;    
+    return tamano !== 1;    
 }
 
-
-    for (i=1; i<arrayJuntos.length; i++){
-        if(F_primo(arrayJuntos[i])){
-            console.log(i)
-        }
+for(const num of arrayJuntos){
+    if(F_primo(num)){
+        console.log(num)
     }
+}
