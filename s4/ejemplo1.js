@@ -1,12 +1,12 @@
-function calcularAge(birthYear){
+function calculateAge(birthYear){
     const age = 2021-birthYear
     return (age)
 }
 
-const gusAge=calcularAge(1999);
-const otroGusAge=calcularAge(1859);
-const nuevoOtroGusAGe=calcularAge(1849);
+function yearsUntilRetirement(year, name) {
+    const age = calculateAge(year);
+    const retirement = 65 - age;
+    console.log(`${name} retires in ${retirement} years.`);
+}
 
-console.log(gusAge)
-console.log(otroGusAge)
-console.log(nuevoOtroGusAGe)
+const gusAGe = yearsUntilRetirement(1999, "Gustavo Calzada")
