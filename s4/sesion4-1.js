@@ -4,3 +4,5 @@ function calcularAge(birthYear){
 }
 
 const gusAge=calcularAge(1999);
+
+console.log(gusAge)
