@@ -1,20 +1,18 @@
 function deepEqual(valor1, valor2){
-    
-    if( (typeof(valor1)=== "object" && typeof(valor2)=== "object")){    
-        console.log("OBJETO")
-        return true;
-    }
-    else if(valor1 === valor2){
-        console.log("IGUAL INT")
+    if(valor1 === valor2){
         return true;
         
     }
+    else if( (Object.keys(valor1).length) !==  (Object.keys(valor2).length) ){
+        return false;
+    }
+    else if( (typeof(valor1) === "object" && typeof(valor2)=== "object")){    
+        return true;
+    }
     else if( Object.keys(valor1) === Object.keys(valor2)  ){
-        console.log("KEYS")
         return true;
     }
     else{
-        console.log("MALO")
         return false;
     }
 
