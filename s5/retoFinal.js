@@ -2,8 +2,9 @@ const array1 = ['Hello'];
 
 
 const mutable = array => {
-    array.push('World');
-    return array;
+    const array1 = [...array];
+    array1.push('World');
+    return array1;
 }
 
 
