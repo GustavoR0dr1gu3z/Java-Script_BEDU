@@ -1,5 +1,6 @@
 const Person = function(name) {
     this.name = name;
+    this.school = 'Bedu';
   }
   
   const Developer = function(name, skills, yearsOfExperience) {
@@ -9,3 +10,7 @@ const Person = function(name) {
     this.yearsOfExperience = yearsOfExperience;
   }
   
+
+  const gus = new Developer('Gustavo', "Python", "5");
+
+  console.log(gus)
