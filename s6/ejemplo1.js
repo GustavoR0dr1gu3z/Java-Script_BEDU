@@ -7,6 +7,6 @@ const john = {
 
 const Persona = function (name, birthYear, job){
     this.name = namme,
-    this.birthYear = birthYear;
+    this.birthYear = birthYear,
     this.job = job
 }
