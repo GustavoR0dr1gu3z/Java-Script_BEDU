@@ -1,5 +1,18 @@
 const Vec = function(x, y) {
-    // Code goes here...
+    this.x = x;
+    this.y = y;
+
+    this.plus = function(vector1){
+        return ("x: "+(this.x+vector1.x)+", y: "+(this.y+vector1.y));
+    };
+
+    this.minus = function(vector1){
+        return ("x: "+(this.x-vector1.x)+", y: "+(this.y-vector1.y))
+    };
+
+    this.length = function(vector2){
+        return ("Longitud: "+(Math.sqrt((this.x*this.x)+(this.y*this.y))))
+    }
 }
 
 const vec1 = new Vec(1, 2);
