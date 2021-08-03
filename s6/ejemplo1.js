@@ -6,11 +6,11 @@ const john = {
   
 
 const Persona = function (name, birthYear, job){
-    this.name = namme,
-    this.birthYear = birthYear,
-    this.job = job
+    this.name = name;
+    this.birthYear = birthYear;
+    this.job = job;
 }
 
-const johnPersona = new Person('Gustavo', 1999, 'Web Developer');
+const johnPersona = new Persona('Gustavo', 1999, 'Web Developer');
 
-console.log(JohnPersona);
+console.log(johnPersona);
