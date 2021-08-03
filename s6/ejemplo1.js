@@ -10,3 +10,7 @@ const Persona = function (name, birthYear, job){
     this.birthYear = birthYear,
     this.job = job
 }
+
+const johnPersona = new Person('Gustavo', 1999, 'Web Developer');
+
+console.log(JohnPersona);
