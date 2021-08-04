@@ -22,3 +22,13 @@ console.log("DESPUES DE AGREGAR COLOR: ", car);
 
 //Imprimiendo caracteristicas iguales
 console.log('¿CARACTERISTICAS IGUALES?: ', car === sameCar); // true
+
+
+// INMUTABILIDAD
+function addColor2(car) {
+    const nuevoCarro = Object.assign({}, car, {
+        color: "Rojoo"
+    });
+
+    return nuevoCarro;
+}
