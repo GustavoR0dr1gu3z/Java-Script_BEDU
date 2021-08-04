@@ -19,3 +19,6 @@ const sameCar = addColor(car);
 
 //Imprimir car con 4 propiedades
 console.log("DESPUES DE AGREGAR COLOR: ", car);
+
+//Imprimiendo caracteristicas iguales
+console.log('¿CARACTERISTICAS IGUALES?: ', car === sameCar); // true
