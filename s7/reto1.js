@@ -1,5 +1,8 @@
 function flatten(arrays) {
-    // Code goes here...
+
+    const newArray  = arrays.flat();
+    
+return newArray;
 }
 
 const arrays = [[1, 2, 3], [4, 5], [6]];
