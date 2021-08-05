@@ -11,6 +11,6 @@ nsToStr.split('')
 //nsToStr.split('').map( n => Number(n) )
 
 // Sumando cada elemento
-nsToStr.split('').map(Number).reduce((acc, e)=>acc+e, 0)
+nsToStr.split('').map(Number).reduce((acc,e)=>acc+e,0) 
 
 console.log(nsToStr);
