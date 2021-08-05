@@ -1,5 +1,8 @@
 function loop(start, test, update, body) {
-    // Code goes here...
+
+    for (let i=start; test(i); i=update(i)) {
+        body(i);
+    }
     
 }
 
