@@ -26,8 +26,14 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.(png|jpeg|gif|svg|jpg|eot|ttf|woff|woff2)$/i,
+        // More information here https://webpack.js.org/guides/asset-modules/
+        type: "asset/resource",
+      },
     ]
   },
+  
   devServer: {
     contentBase: path.resolve(__dirname, 'dist')
   }
