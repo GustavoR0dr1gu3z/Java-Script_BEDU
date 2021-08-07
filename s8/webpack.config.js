@@ -13,7 +13,7 @@ module.exports = {
       template: './src/index.html'
     })
   ],
-  devServer:{
-      contentBase: path.resolve(__dirname, 'dist')
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist')
   }
 }
