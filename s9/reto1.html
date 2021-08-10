@@ -12,7 +12,14 @@
 
     <script>
 
-    const img1 = document.querySelector('img');
+    const imgD = document.querySelectorAll('img');
+    
+    for(let i=0; i<imgD.length; i++){
+    const imgD2 = imgD[i];
+        const texto = document.createTextNode(imgD2.alt);
+        imgD2.parentNode.replaceChild(texto, imgD2);
+    }
+    
 
     </script>
   </body>
