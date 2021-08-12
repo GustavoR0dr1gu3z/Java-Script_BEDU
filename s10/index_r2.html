@@ -57,8 +57,20 @@
   
     const m1 = document.querySelector("#modal");
     const btn = document.querySelector('button');
-    const modalImage = document.getElementById("modal-image");
-    const close = document.getElementsByClassName("close")[0];
+    const mI = document.querySelector("#modal-image");
+    const cerrar = document.querySelector(".close");
+
+    function botonImagen(){
+        m1.style.display="block";
+        mI.src = "https://picsum.photos/300/200";
+    }
+
+    function cerrarImagen(){
+        m1.style.display="none";
+    }
+
+    btn.addEventListener('click', botonImagen);
+    cerrar.addEventListener('click', cerrarImagen)
 
 
 </script>
