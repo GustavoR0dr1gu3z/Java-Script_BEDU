@@ -14,18 +14,17 @@
 
   function tamanio(tam2){
     tam = tam2;
-    globo.style = "font-size: "+tam+"px";
+    let globo2 = globo
+    globo2.style = "font-size: "+tam+"px";
   }
   tamanio(20);
 
   function funcion(event){
     if( event.keyCode == "38" ){
-      if(tam > 80){
-        globo.textContent = "💥";
-        /*Si es mayor a 80 el tamaño se regresa a funcion*/
-        document.body.removeEventListener("keydown",tamanio);
-
-        console.log("MAYOR");
+      if(tam > 80){            
+        globo.textContent = "💥";      
+        document.body.removeEventListener("keydown",funcion);
+        console.log("EXPLOTAR!!");
       } else{
         let t = tam*1.1
         tamanio(t);
