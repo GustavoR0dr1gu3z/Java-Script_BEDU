@@ -7,4 +7,5 @@ function foo(){
 }
 
 
-console.log(foo())
+//console.log(foo())
+console.log( foo().then((value) => console.log(value)) )
