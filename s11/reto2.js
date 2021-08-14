@@ -4,7 +4,7 @@ async function wait() {
 }
 
 function log(value) {
-    // Code goes here...
+    wait().then((promesaWait) => console.log(promesaWait))
 }
 
 log()
