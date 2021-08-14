@@ -1,6 +1,16 @@
 function promiseAll(promises) {
     return new Promise((resolve, reject) => {
-      // Code goes here...
+
+        let arrayPromise = [];
+        let arr = promises.length;
+        for (let i = 0; i < promises.length; i++) {
+          promises[i].then(result => {
+            arrayPromise[i] = result;
+            arr--;
+            if (arr === 0) resolve(arrayPromise);
+          }).catch(reject);
+        }
+        if (promises.length === 0) resolve(arrayPromise);
     })
 }
 
@@ -12,17 +22,17 @@ function soon(value) {
 
   // Test cases
 promiseAll([])
-    .then(results => {
-        console.log('Expected result []: ', results)
+    .then(arrayPromise => {
+        console.log('Expected result []: ', arrayPromise)
     })
 
 promiseAll([soon(1), soon(2), soon(3)])
-    .then(results => {
-        console.log('Expected result [1, 2, 3]: ', results)
+    .then(arrayPromise => {
+        console.log('Expected result [1, 2, 3]: ', arrayPromise)
     })
 
 promiseAll([soon(1), Promise.reject('X'), soon(3)])
-    .then(results => {
+    .then(arrayPromise => {
         console.log('We should not get here')
     })
     .catch(error => {
