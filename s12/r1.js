@@ -1,33 +1,18 @@
-
-const divApp = document.getElementById('app');
-
-
-function usuarios() {
-    return fetch('https://api.github.com/users')
-
-        .then(function (response) {
-        return response.json();
-        })
-        
-        .then(function (data) {
-        return data.slice(0, 4)
-        })
-}
+const app = document.getElementById('app');
 
 
-
-
-
-usuarios()
+getGithubUsers()
   .then(function (data) {
-    data.forEach(function (data) {
-      app.appendChild(creacionDiv(data));
+    data.forEach(function (user) {
+      return getUserRepositories(user.repos_url)
+        .then(function (repos) {
+          app.appendChild(createCard(user, repos));
+        })
     })
   })
 
 
-
-function creacionDiv(data) {
+function createCard(data) {
   const card = document.createElement('div');
   card.className = 'card';
 
@@ -48,9 +33,59 @@ function creacionDiv(data) {
   img.src = data.avatar_url;
   img.alt = data.login;
 
+//const reposList = createReposList(repos_url);
+
   card.appendChild(img);
   card.appendChild(name);
+  //card.appendChild(reposList);
   card.appendChild(link);
 
   return card;
+}
+
+
+
+
+function getGithubUsers() {
+  return fetch('https://api.github.com/users')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      return data.slice(0, 4)
+    })
+}
+
+function createReposList(repos) {
+  const details = document.createElement('details');
+
+  const summary = document.createElement('summary');
+  const summaryText = document.createTextNode('Repositories:');
+  summary.appendChild(summaryText);
+
+  details.appendChild(summary);
+
+  repos.forEach(function(repo) {
+    const link = document.createElement('a');
+    const linkText = document.createTextNode(repo.name);
+
+    link.appendChild(linkText);
+    link.href = repo.html_url;
+    link.target = '_blank';
+    link.className = 'button-repo';
+
+    details.appendChild(link);
+  })
+
+  return details;
+}
+
+function getUserRepositories(url) {
+  return fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      return data.slice(0, 5)
+    })
 }
